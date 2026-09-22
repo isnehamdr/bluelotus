@@ -2,11 +2,10 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 /* Sample data: replace titles and image paths with your own. */
 const PARTNERS = [
-  { title: 'Family Offices', image: '/images/partners/family-offices.jpg' },
-  { title: 'Real Estate Investment Trusts', image: '/images/partners/reits.jpg' },
-  { title: 'Private Equity', image: '/images/partners/private-equity.jpg' },
-  { title: 'Institutional Investors', image: '/images/partners/institutional.jpg' },
-  { title: 'Developers', image: '/images/partners/developers.jpg' },
+  { title: 'Family Offices', image: '/images/img5.jpg' },
+  { title: 'Real Estate Investment Trusts', image: '/images/img6.png' },
+  { title: 'Private Equity', image: '/images/img7.jpg' },
+
 ]
 
 const FADE = 'linear-gradient(to right, #000 82%, transparent 100%)'
@@ -65,10 +64,10 @@ export default function PartnersCarousel({
   const maskStyle = atEnd ? undefined : { WebkitMaskImage: FADE, maskImage: FADE }
 
   return (
-    <section className="bg-[#ebe9e4] py-14 text-[#112d5e] md:py-20">
+    <section className="bg-[#ebe9e4] py-14 text-[#001a44] md:py-20">
       <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
-        <p className="text-sm font-medium uppercase tracking-[0.15em]">{eyebrow}</p>
-        <h2 className="mt-4 text-2xl font-semibold leading-snug sm:text-3xl">{title}</h2>
+        <p className="text-md font-semibold uppercase tracking-[0.15em]">{eyebrow}</p>
+        <h2 className="mt-4 text-2xl font-semibold leading-snug sm:text-4xl">{title}</h2>
 
         {/* Scroller stays inside the content width; the next card peeks in and fades */}
         <div
@@ -77,7 +76,7 @@ export default function PartnersCarousel({
           aria-label={title}
           tabIndex={0}
           style={maskStyle}
-          className="mt-8 flex snap-x snap-mandatory gap-2.5 overflow-x-auto focus:outline-none focus-visible:ring-2 focus-visible:ring-[#112d5e]/40 md:mt-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="mt-8 flex snap-x snap-mandatory gap-2.5 overflow-x-auto focus:outline-none focus-visible:ring-2 focus-visible:ring-[#001a44]/40 md:mt-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {items.map((item) => (
             <figure key={item.title} className="shrink-0 basis-[80%] snap-start sm:basis-[46%] lg:basis-[42%]">
@@ -90,7 +89,7 @@ export default function PartnersCarousel({
                   className="h-full w-full object-cover"
                 />
               </div>
-              <figcaption className="mt-3 text-xs font-semibold uppercase tracking-[0.1em] sm:text-[13px]">
+              <figcaption className="mt-3 text-xs font-semibold uppercase tracking-[0.1em] sm:text-xl">
                 {item.title}
               </figcaption>
             </figure>
@@ -109,8 +108,8 @@ export default function PartnersCarousel({
                 className="group p-2 focus:outline-none"
               >
                 <span
-                  className={`block h-1.5 w-1.5 rounded-full transition-colors group-focus-visible:ring-2 group-focus-visible:ring-[#112d5e] ${
-                    i === page ? 'bg-[#112d5e]' : 'bg-[#8b93a8] group-hover:bg-[#5b6690]'
+                  className={`block h-2.5 w-2.5 rounded-full transition-colors group-focus-visible:ring-2 group-focus-visible:ring-[#001a44] ${
+                    i === page ? 'bg-[#001a44]' : 'bg-[#8b93a8] group-hover:bg-[#5b6690]'
                   }`}
                 />
               </button>

@@ -44,7 +44,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [capsOpen, setCapsOpen] = useState(false)
 
-  // Solid header after scrolling past the top
+  // Track scroll position for the header gradient
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
     onScroll()
@@ -73,29 +73,43 @@ export default function Navbar() {
     setCapsOpen(false)
   }
 
-  const lineColor = scrolled ? 'bg-slate-800' : 'bg-white'
-
   return (
     <>
-      {/* Top bar: hamburger only, transparent over hero, white once scrolled */}
+      {/* Top bar: transparent at top, gradient overlay once scrolled, lines always white */}
       <header
-        className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
-          scrolled ? 'bg-white shadow-sm' : 'bg-transparent'
+        className={`fixed inset-x-0 top-0 z-40 transition-[background] duration-300 ${
+          scrolled ? '' : 'bg-transparent'
         }`}
+        style={
+          scrolled
+            ? {
+                backgroundImage:
+                  'linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.0001))',
+              }
+            : undefined
+        }
       >
-        <div className="flex items-center px-6 py-6 md:px-12 lg:px-14 lg:py-10">
+        <div className="flex items-center justify-between px-6 py-6 md:px-12 lg:px-14 lg:py-8">
+          {/* Hamburger */}
           <button
             type="button"
             aria-label="Open menu"
             aria-expanded={menuOpen}
             aria-controls="site-drawer"
             onClick={() => setMenuOpen(true)}
-            className="group flex w-12 flex-col gap-[10px] py-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 lg:w-14 lg:gap-[10px]"
+            className="group flex w-10 flex-col gap-[8px] py-2 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 sm:w-12 sm:gap-[10px] lg:w-14 lg:gap-[10px]"
           >
-            <span className={`block h-px w-full transition-colors ${lineColor}`} />
-            <span className={`block h-px w-full transition-colors ${lineColor}`} />
-            <span className={`block h-px w-full transition-colors ${lineColor}`} />
+            <span className="block h-px w-full bg-white sm:h-[1.5px]" />
+            <span className="block h-px w-full bg-white sm:h-[1.5px]" />
+            <span className="block h-px w-full bg-white sm:h-[1.5px]" />
           </button>
+
+          {/* Optional: logo on the right (uncomment & point to your asset) */}
+          {/* <img
+            src="/images/logo.jpeg"
+            alt="Blue Lotus Hospitality"
+            className="h-12 w-12 object-contain sm:h-14 sm:w-14 lg:h-16 lg:w-16"
+          /> */}
         </div>
       </header>
 
@@ -112,7 +126,7 @@ export default function Navbar() {
       <aside
         id="site-drawer"
         aria-hidden={!menuOpen}
-        className={`fixed z-50 flex flex-col overflow-y-auto bg-[#112d5e] text-white transition-all duration-300 ease-out
+        className={`fixed z-50 flex flex-col overflow-y-auto bg-[#001a44] text-white transition-all duration-300 ease-out
           inset-0
           lg:inset-y-4 lg:left-8 lg:right-auto lg:w-[450px]
           ${menuOpen ? 'visible translate-x-0 opacity-100' : 'invisible -translate-x-full opacity-0'}`}
@@ -122,7 +136,7 @@ export default function Navbar() {
             type="button"
             aria-label="Close menu"
             onClick={close}
-            className="-m-2 p-2 text-white/90 transition hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
+            className="-m-2 p-2 text-[#bc8b29]/90 transition hover:text-[] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
           >
             <CloseIcon />
           </button>

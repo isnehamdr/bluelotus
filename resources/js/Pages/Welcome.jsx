@@ -372,12 +372,14 @@ import MarketSlider from '@/HomePage/MarketSlider'
 import Navbar from '@/HomePage/Navbar'
 import PartnersCarousel from '@/HomePage/Partnerscarousel'
 import PortfolioSection from '@/HomePage/Portfoliosection'
+import BackToTop from '@/HomePage/BacktoTop'
 import React from 'react'
 
 const Welcome = () => {
   return (
     <>
     <Navbar/>
+    <BackToTop/>
     <Hero/>
     <Intro/>
     <PortfolioSection/>
@@ -385,8 +387,8 @@ const Welcome = () => {
     <DestinationExpertise/>
     <KeyStats/>
     <Capabilities/>
-    <MarketSlider/>
-    <PartnersCarousel/>
+    {/* <MarketSlider/> */}
+    {/* <PartnersCarousel/> */}
     <Footer/>
     </>
   )

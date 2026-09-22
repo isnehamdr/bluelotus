@@ -10,15 +10,15 @@ const TABS = [
   {
     id: 'premium',
     label: 'Premium',
-    image: '/images/portfolio-premium.jpg',
+    image: '/images/portfolio.jpg',
     imageAlt: 'Hotel lounge with seating area and fireplace',
     brands: [
-      { name: 'Westin', logo: '' },
-      { name: 'Kimpton', logo: '' },
-      { name: 'Hilton', logo: '' },
-      { name: 'Hyatt Regency', logo: '' },
-      { name: 'Curio Collection', logo: '' },
-      { name: 'Autograph Collection', logo: '' },
+      { name: 'Westin', logo: '/images/logo1.png' },
+      { name: 'Kimpton', logo: '/images/logo2.png' },
+      { name: 'Hilton', logo: '/images/logo3.png' },
+      { name: 'Hyatt Regency', logo: '/images/logo4.png' },
+      { name: 'Curio Collection', logo: '/images/logo5.png' },
+      { name: 'Autograph Collection', logo: '/images/logo6.png' },
     ],
   },
   { id: 'enhanced-select', label: 'Enhanced Select', image: '', imageAlt: '', brands: [] },
@@ -30,10 +30,10 @@ const TABS = [
 
 function BrandMark({ brand }) {
   if (brand.logo) {
-    return <img src={brand.logo} alt={brand.name} className="max-h-12 w-auto max-w-[140px] object-contain" />
+    return <img src={brand.logo} alt={brand.name} className="max-h-16 w-auto max-w-[180px] object-contain" />
   }
   return (
-    <span className="text-center text-sm font-semibold uppercase tracking-[0.1em] text-slate-800">
+    <span className="text-center text-sm font-semibold uppercase leading-snug tracking-[0.1em] text-[#001a44]">
       {brand.name}
     </span>
   )
@@ -60,20 +60,20 @@ export default function PortfolioSection() {
   }
 
   return (
-    <section className="bg-[#ebe9e4] text-[#112d5e]">
-      <div className="mx-auto max-w-7xl px-6 py-14 sm:px-10 md:py-20 lg:px-16">
-        <p className="text-sm font-medium uppercase tracking-[0.15em]">Our Portfolio</p>
-        <h2 className="mt-4 max-w-xl text-2xl font-semibold leading-snug sm:text-3xl">
+    <section className="bg-[#ebe9e4] text-[#001a44]">
+      <div className="mx-auto max-w-7xl px-6 py-14 sm:py-0 sm:pb-24 sm:px-10 lg:px-16 ">
+        <p className="text-lg font-semibold uppercase tracking-[0.15em]">Our Portfolio</p>
+        <h2 className="mt-4 max-w-2xl text-2xl font-semibold leading-snug sm:text-3xl lg:text-4xl tracking-[0.06em]">
           Solutions-Oriented Approach for Diverse Experiences
         </h2>
 
         {/* Tabs */}
-        <div className="mt-8 border-b border-[#e6a48f] md:mt-10">
+        <div className="mt-8 border-b border-[#bc8b29] md:mt-10">
           <div
             role="tablist"
             aria-label="Portfolio categories"
             onKeyDown={onKeyDown}
-            className="-mb-px flex gap-6 overflow-x-auto whitespace-nowrap md:gap-8 lg:gap-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="-mb-px flex gap-4 overflow-x-auto whitespace-nowrap sm:gap-6 md:gap-8 lg:gap-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {TABS.map((tab, i) => {
               const selected = tab.id === activeId
@@ -88,10 +88,10 @@ export default function PortfolioSection() {
                   tabIndex={selected ? 0 : -1}
                   type="button"
                   onClick={() => setActiveId(tab.id)}
-                  className={`shrink-0 border-b-[3px] pb-3 text-xs font-semibold uppercase tracking-[0.08em] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e8590c] ${
+                  className={`shrink-0 border-b-[12px] pb-3 text-md font-semibold uppercase tracking-[0.08em] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bc8b29] ${
                     selected
-                      ? 'border-[#e8590c] text-[#e8590c]'
-                      : 'border-transparent text-[#112d5e] hover:text-[#e8590c]'
+                      ? 'border-[#bc8b29] text-[#bc8b29]'
+                      : 'border-transparent text-[#001a44] hover:text-[#bc8b29]'
                   }`}
                 >
                   {tab.label}
@@ -106,19 +106,19 @@ export default function PortfolioSection() {
           role="tabpanel"
           id={`panel-${active.id}`}
           aria-labelledby={`tab-${active.id}`}
-          className="mt-10 grid items-center gap-10 md:mt-12 lg:grid-cols-12 lg:gap-12"
+          className="mt-10 grid items-center gap-10 md:mt-12 md:grid-cols-2 md:gap-10 lg:grid-cols-12 lg:gap-12"
         >
           <div className="lg:col-span-7">
             {active.brands.length ? (
-              <ul className="grid grid-cols-2 items-center justify-items-center gap-x-6 gap-y-10 sm:grid-cols-3 lg:gap-y-16">
+              <ul className="grid grid-cols-2 items-center justify-items-center gap-x-6 gap-y-8 sm:grid-cols-3 lg:gap-y-16">
                 {active.brands.map((brand) => (
-                  <li key={brand.name} className="flex h-16 w-full items-center justify-center">
+                  <li key={brand.name} className="flex min-h-[64px] w-full items-center justify-center px-2 py-2">
                     <BrandMark brand={brand} />
                   </li>
                 ))}
               </ul>
             ) : (
-              <p className="text-sm text-[#112d5e]/70">No brands added for this category yet.</p>
+              <p className="text-sm text-[#001a44]/70">No brands added for this category yet.</p>
             )}
           </div>
 
