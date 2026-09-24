@@ -365,15 +365,20 @@ import Capabilities from '@/HomePage/Capabilities'
 import DestinationExpertise from '@/HomePage/DestinationExpertise'
 import Footer from '@/HomePage/Footer'
 import Hero from '@/HomePage/Hero'
-import Intro from '@/HomePage/Intro'
+// import Intro from '@/HomePage/Intro'
 import KeyStats from '@/HomePage/KeyStats'
 import Maps from '@/HomePage/Maps'
-import MarketSlider from '@/HomePage/MarketSlider'
+// import MarketSlider from '@/HomePage/MarketSlider'
 import Navbar from '@/HomePage/Navbar'
-import PartnersCarousel from '@/HomePage/Partnerscarousel'
+// import PartnersCarousel from '@/HomePage/Partnerscarousel'
 import PortfolioSection from '@/HomePage/Portfoliosection'
 import BackToTop from '@/HomePage/BacktoTop'
 import React from 'react'
+import About from '@/HomePage/About'
+import Whylotus from '@/HomePage/Whylotus'
+import Engagement from '@/HomePage/Engagement'
+// import ServiceModel from '@/HomePage/ServiceModel'
+
 
 const Welcome = () => {
   return (
@@ -381,12 +386,16 @@ const Welcome = () => {
     <Navbar/>
     <BackToTop/>
     <Hero/>
-    <Intro/>
+       {/* <Intro/> */}
+<About/>
+
     <PortfolioSection/>
     <Maps/>
     <DestinationExpertise/>
     <KeyStats/>
-    <Capabilities/>
+    <Whylotus/>
+    <Engagement/>
+    {/* <Capabilities/> */}
     {/* <MarketSlider/> */}
     {/* <PartnersCarousel/> */}
     <Footer/>

@@ -1,17 +1,17 @@
 import React from 'react'
 
 const STATS = [
-  { headline: '200+\nHOTELS', description: '' },
-  { headline: '50+ YEARS', description: 'experience in hospitality management' },
-  { headline: '30+ BRANDS', description: 'of hotels and restaurants under management' },
-  { headline: '10 YEARS', description: 'average senior leadership tenure' },
+  { headline: '5+\nHOTELS', description: '' },
+  { headline: '3+ YEARS', description: 'experience in hospitality management' },
+  { headline: '6+ BRANDS', description: 'of hotels and restaurants under management' },
+  { headline: '7+ YEARS', description: 'average senior leadership tenure' },
 ]
 
 export default function KeyStats({ title = 'Key to Our Success', stats = STATS }) {
   return (
     <section className="bg-[#ebe9e4] text-[#bc8b29]">
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-14 md:py-20 lg:px-16 lg:pb-20 lg:pt-0">
-        <h2 className="text-sm font-semibold uppercase tracking-wide sm:text-base md:text-lg">
+        <h2 className="text-sm font-semibold uppercase tracking-wide sm:text-base md:text-xl">
           {title}
         </h2>
 

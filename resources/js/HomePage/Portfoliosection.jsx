@@ -1,41 +1,87 @@
 import React, { useRef, useState } from 'react'
-
-/*
-  Each tab has a list of brands and an image.
-  - Add a `logo` path (e.g. '/images/brands/westin.svg') to any brand to show the real logo.
-    Without one, the brand name is shown as text.
-  - Fill the empty `brands` arrays for the other tabs with your own data.
-*/
 const TABS = [
   {
-    id: 'premium',
-    label: 'Premium',
+    id: 'pillar-one',
+    label: 'Pillar One',
+    labelname: 'Operator Model',
+    labelnameicon: '/images/building.png',
     image: '/images/portfolio.jpg',
     imageAlt: 'Hotel lounge with seating area and fireplace',
     brands: [
-      { name: 'Westin', logo: '/images/logo1.png' },
-      { name: 'Kimpton', logo: '/images/logo2.png' },
-      { name: 'Hilton', logo: '/images/logo3.png' },
-      { name: 'Hyatt Regency', logo: '/images/logo4.png' },
-      { name: 'Curio Collection', logo: '/images/logo5.png' },
-      { name: 'Autograph Collection', logo: '/images/logo6.png' },
+      { name: ' Room Division', logo: '/images/room.png' },
+      { name: 'Food & Beverage', logo: '/images/spoon.png' },
+      { name: 'Admin & General', logo: '/images/admin.png' },
+      { name: 'Sales & Marketing', logo: '/images/sales.png' },
+      { name: 'Information Technology', logo: '/images/informationtechnology.png' },
+      { name: 'Engineering Department & Utility', logo: '/images/department.png' },
     ],
   },
-  { id: 'enhanced-select', label: 'Enhanced Select', image: '', imageAlt: '', brands: [] },
-  { id: 'select', label: 'Select', image: '', imageAlt: '', brands: [] },
-  { id: 'echelon', label: 'Echelon', image: '', imageAlt: '', brands: [] },
-  { id: 'resort', label: 'Resort', image: '', imageAlt: '', brands: [] },
-  { id: 'restaurants-bars', label: 'Restaurants & Bars', image: '', imageAlt: '', brands: [] },
+  {
+    id: 'pillar-two',
+    label: 'Pillar Two',
+    labelname: 'Asset Management Service',
+     labelnameicon: '/images/growth.png',
+    image: '/images/img6.png',
+    imageAlt: 'Hotel lounge with seating area and fireplace',
+    brands: [
+      { name: 'Financial Performance', logo: '/images/financialgrowth.png' },
+      { name: 'Capital Expenditure ', logo: '/images/capitalexpenditure.png' },
+      { name: 'Revenue & Commercial Strategy', logo: '/images/revenue.png' },
+      { name: 'Strategic Planning', logo: '/images/strategy.png' },
+      { name: 'Operator Performance', logo: '/images/performance.png' },
+      { name: 'Investment Decisions', logo: '/images/investment.png' },
+    ],
+  },
+  {
+    id: 'pillar-three',
+    label: 'Pillar Three',
+    labelname: 'Brand Liaison Service',
+     labelnameicon: '/images/handshake.png',
+    image: '/images/img1.jpg',
+    imageAlt: 'Hotel lounge with seating area and fireplace',
+    brands: [
+      { name: ' Franchise & MA Structuring', logo: '/images/handshake.png' },
+      { name: 'Standards Compliance', logo: '/images/performance.png' },
+      { name: 'Loyalty & Distribution', logo: '/images/growth.png' },
+      { name: 'Renewals & Repositioning', logo: '/images/badge1.png' },
+
+    ],
+  },
+ 
 ]
 
+// Shown wherever a real logo/photo isn't available yet, so nothing ever renders
+// as a broken image — just a consistent icon in the brand color.
+const BuildingIcon = (props) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" {...props}>
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M4 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16M4 21h16M14 21v-6h5a1 1 0 0 1 1 1v5M7 7h2M7 11h2M7 15h2M10 7h2M10 11h2M10 15h2"
+    />
+  </svg>
+)
+
+// Icon (logo if present, otherwise a fallback mark) paired with the name as its own label —
+// never image-only and never text-only, so every card looks the same regardless of assets.
 function BrandMark({ brand }) {
-  if (brand.logo) {
-    return <img src={brand.logo} alt={brand.name} className="max-h-16 w-auto max-w-[180px] object-contain" />
-  }
   return (
-    <span className="text-center text-sm font-semibold uppercase leading-snug tracking-[0.1em] text-[#001a44]">
-      {brand.name}
-    </span>
+    <div className="flex flex-col items-center gap-2.5 text-center sm:gap-3">
+      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-sm sm:h-20 sm:w-20">
+        {brand.logo ? (
+          <img
+            src={brand.logo}
+            alt=""
+            className="max-h-8 w-auto max-w-[52px] object-contain sm:max-h-12 sm:max-w-[64px]"
+          />
+        ) : (
+          <BuildingIcon className="h-6 w-6 text-[#bc8b29] sm:h-8 sm:w-8" />
+        )}
+      </div>
+      <span className="text-xs font-semibold uppercase leading-snug tracking-[0.1em] text-[#001a44] sm:text-sm">
+        {brand.name}
+      </span>
+    </div>
   )
 }
 
@@ -61,10 +107,10 @@ export default function PortfolioSection() {
 
   return (
     <section className="bg-[#ebe9e4] text-[#001a44]">
-      <div className="mx-auto max-w-7xl px-6 py-14 sm:py-0 sm:pb-24 sm:px-10 lg:px-16 ">
-        <p className="text-lg font-semibold uppercase tracking-[0.15em]">Our Portfolio</p>
+      <div className="mx-auto max-w-7xl px-6 py-14  sm:py-24 sm:px-10 lg:px-16 ">
+        <p className="text-lg font-semibold uppercase tracking-[0.15em]">Our Service Model</p>
         <h2 className="mt-4 max-w-2xl text-2xl font-semibold leading-snug sm:text-3xl lg:text-4xl tracking-[0.06em]">
-          Solutions-Oriented Approach for Diverse Experiences
+          Three Pillars, One Accountable Partner
         </h2>
 
         {/* Tabs */}
@@ -88,7 +134,7 @@ export default function PortfolioSection() {
                   tabIndex={selected ? 0 : -1}
                   type="button"
                   onClick={() => setActiveId(tab.id)}
-                  className={`shrink-0 border-b-[12px] pb-3 text-md font-semibold uppercase tracking-[0.08em] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bc8b29] ${
+                  className={`shrink-0 border-b-[3px] pb-3 text-md font-semibold uppercase tracking-[0.08em] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bc8b29] ${
                     selected
                       ? 'border-[#bc8b29] text-[#bc8b29]'
                       : 'border-transparent text-[#001a44] hover:text-[#bc8b29]'
@@ -110,9 +156,9 @@ export default function PortfolioSection() {
         >
           <div className="lg:col-span-7">
             {active.brands.length ? (
-              <ul className="grid grid-cols-2 items-center justify-items-center gap-x-6 gap-y-8 sm:grid-cols-3 lg:gap-y-16">
+              <ul className="grid grid-cols-2 items-center justify-items-center gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:gap-y-16">
                 {active.brands.map((brand) => (
-                  <li key={brand.name} className="flex min-h-[64px] w-full items-center justify-center px-2 py-2">
+                  <li key={brand.name} className="flex w-full items-center justify-center px-2 py-2">
                     <BrandMark brand={brand} />
                   </li>
                 ))}
@@ -123,16 +169,38 @@ export default function PortfolioSection() {
           </div>
 
           <div className="lg:col-span-5">
-            {active.image ? (
-              <img
-                src={active.image}
-                alt={active.imageAlt}
-                className="aspect-[4/3] w-full object-cover"
-              />
-            ) : (
-              <div className="aspect-[4/3] w-full bg-[#d9d6cf]" aria-hidden="true" />
-            )}
-          </div>
+  <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#d9d6cf]">
+    {active.image ? (
+      <>
+        <img
+          src={active.image}
+          alt={active.imageAlt}
+          className="h-full w-full object-cover"
+        />
+
+        <div className="absolute inset-x-0 bottom-0 flex items-center gap-3 bg-[#001a44]/80 px-4 py-3 text-white sm:px-6 sm:py-4">
+          <img
+  src={active.labelnameicon}
+  alt=""
+  className="h-12 w-12 shrink-0 object-contain brightness-0 invert sm:h-6 sm:w-6"
+/>
+
+          <span className="text-xs font-semibold uppercase tracking-[0.1em] sm:text-lg">
+            {active.labelname}
+          </span>
+        </div>
+      </>
+    ) : (
+      <div className="flex h-full w-full flex-col items-center justify-center gap-3 text-[#001a44]/50">
+        <BuildingIcon className="h-9 w-9 sm:h-10 sm:w-10" />
+
+        <span className="text-xs font-semibold uppercase tracking-[0.1em] sm:text-sm">
+          {active.label}
+        </span>
+      </div>
+    )}
+  </div>
+</div>
         </div>
       </div>
     </section>

@@ -13,11 +13,10 @@ const NAV_LINKS = [
   },
   { label: 'Our Team', href: '/team' },
   { label: 'Our Portfolio', href: '/portfolio' },
-  { label: 'Our Impact', href: '/impact' },
-  { label: 'Press', href: '/press' },
+  { label: 'About', href: '/impact' },
+  { label: 'Service', href: '/press' },
   { label: 'Careers', href: '/careers' },
-  { label: 'Echelon', href: '/echelon' },
-  { label: 'Urgo Hotels Canada', href: '/urgo-hotels-canada' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 const CloseIcon = () => (

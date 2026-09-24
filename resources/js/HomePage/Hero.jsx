@@ -153,10 +153,11 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 // Replace src values with your own property photography (e.g. /images/hero-1.jpg)
 // Replace captions with real Blue Lotus managed properties once available.
 const SLIDES = [
-  { src: '/images/hero1.jpg', caption: 'Property One, Kathmandu, Nepal' },
-  { src: '/images/hero2.jpg', caption: 'Property Two, Pokhara, Nepal' },
-  { src: '/images/hero3.jpg', caption: 'Property Three, Chitwan, Nepal' },
-  { src: '/images/hero4.jpg', caption: 'Property Four, Bhaktapur, Nepal' },
+  { src: '/images/h1.jpg', },
+  { src: '/images/h2.jpg',  },
+  { src: '/images/h3.jpg', },
+  { src: '/images/h4.jpg', },
+ 
 ]
 
 const INTERVAL_MS = 6000
@@ -255,7 +256,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[84vh] w-full overflow-hidden bg-slate-900 text-white"
+      className="relative min-h-[90vh] w-full overflow-hidden bg-slate-900 text-white"
     >
       {/* Slides */}
       {SLIDES.map((slide, i) => (
@@ -313,18 +314,18 @@ export default function Hero() {
           ))}
         </div>
 
-        <p className="mt-3 text-3xl font-light leading-none tracking-[0.12em] sm:mt-4 sm:text-4xl lg:text-5xl">
-          HOTELS
+        <p className="mt-3 text-3xl font-light leading-none tracking-[0.12em] uppercase sm:mt-4 sm:text-4xl lg:text-5xl">
+          Hospitality
         </p>
       </div>
 
       {/* Caption: centered on small screens, bottom-right on large */}
-      <p
+      {/* <p
         key={active}
         className="absolute inset-x-0 bottom-6 px-6 text-center text-sm font-medium text-white/90 lg:inset-x-auto lg:bottom-9 lg:right-[190px] lg:px-0 lg:text-left lg:text-base"
       >
         {SLIDES[active].caption}
-      </p>
+      </p> */}
     </section>
   )
 }
