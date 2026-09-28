@@ -14,14 +14,55 @@ Route::get('/', function () {
     ]);
 });
 
+
+// Route::get('/detailpage', function () {
+//     return Inertia::render('DetailPage');
+// });
+// Old link keeps working
+Route::redirect('/detailpage', '/detailpage/operator-model');
+
+Route::get('/detailpage/{slug}', function (string $slug) {
+    $path = resource_path('data/data.json');
+
+    abort_unless(File::exists($path), 404);
+
+    $items = json_decode(File::get($path), true);
+    $capability = collect($items)->firstWhere('slug', $slug);
+
+    abort_if(! $capability, 404);
+
+    return Inertia::render('DetailPage', ['capability' => $capability]);
+})->where('slug', '[a-z0-9-]+')->name('detailpage.show');
+
+
+Route::get('/detailpage/{slug}', function (string $slug) {
+    $items = json_decode(File::get(resource_path('data/data.json')), true);
+    $capability = collect($items)->firstWhere('slug', $slug);
+
+    abort_if(! $capability, 404);
+
+    return Inertia::render('DetailPage', ['capability' => $capability]);
+})->name('detailpage.show');
+
+
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+
+
+
+
+
 
 require __DIR__.'/auth.php';

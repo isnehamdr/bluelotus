@@ -305,10 +305,10 @@ function SectionHeading({ children }) {
   )
 }
 
-export default function SimpleFooter({
+export default function Footer({
   phone = '+977 985-116-8157',
   email = 'info@bluelotushospitality.com',
-  address = 'Add your full street address here',
+  address = 'Kathmandu, Nepal',
 }) {
   const year = new Date().getFullYear()
 
@@ -403,7 +403,7 @@ export default function SimpleFooter({
               rel="noopener noreferrer"
               className="text-white/70 underline-offset-2 hover:text-[#bc8b29] hover:underline"
             >
-              S.A.I.T Solution Nepal
+              S.A I.T Solution Nepal
             </a>
           </p>
         </div>

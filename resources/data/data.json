@@ -1,0 +1,115 @@
+[
+  {
+    "slug": "operator-model",
+    "label": "Pillar One",
+    "title": "Operator Model",
+    "intro": "A single operating team accountable for every department — run to institutional standards.",
+    "heroImage": "/images/h1.jpg",
+    "items": [
+      {
+        "title": "Room Division",
+        "image": "/images/1.jpg",
+        "alt": "Front office of a Blue Lotus managed property",
+        "text": "Front office, reservations & guest services from arrival to departure."
+      },
+      {
+        "title": "Food & Beverage",
+        "image": "/images/2.jpg",
+        "alt": "Dining outlet of a Blue Lotus managed property",
+        "text": "Outlet management, banquets & culinary standards driving covers and spend."
+      },
+      {
+        "title": "Other Operating Departments",
+        "image": "/images/3.jpg",
+        "alt": "Spa and health club of a Blue Lotus managed property",
+        "points": ["Spa & Health Club", "Transportation", "Business Center", "Telephone", "Laundry"]
+      },
+      {
+        "title": "Admin & General",
+        "image": "/images/4.jpg",
+        "alt": "Administrative office of a Blue Lotus managed property",
+        "text": "HR, procurement, IT, and administrative support and Finance functions."
+      },
+      {
+        "title": "Sales & Marketing",
+        "image": "/images/5.jpg",
+        "alt": "Sales and marketing team at work",
+        "points": [
+          "Corporate, MICE & group accounts driving direct revenue.",
+          "Brand positioning, digital presence & demand generation."
+        ]
+      },
+      {
+        "title": "Engineering Department & Utility",
+        "image": "/images/6.jpg",
+        "alt": "Engineering and utility area of a Blue Lotus managed property"
+      }
+    ]
+  },
+  {
+    "slug": "asset-management",
+    "label": "Pillar Two",
+    "title": "Asset Management",
+    "heroImage": "/images/h2.jpg",
+    "items": [
+      {
+        "title": "Financial Performance",
+        "image": "/images/5.jpg",
+        "alt": "Financial performance review",
+        "text": "Monitor GOP, EBITDA, cash flow and benchmark results."
+      },
+      {
+        "title": "Revenue & Commercial Strategy",
+        "image": "/images/6.jpg",
+        "alt": "Revenue and commercial strategy review",
+        "text": "Evaluate ADR, RevPAR, segmentation and distribution."
+      },
+      {
+        "title": "Operator Performance",
+        "image": "/images/7.jpg",
+        "alt": "Operator performance review",
+        "text": "Review KPIs, management fees and contractual obligations."
+      }
+    ]
+  },
+  {
+    "slug": "brand-liaison",
+    "label": "Pillar Three",
+    "title": "Brand Liaison Service",
+    "intro": "“We structure and manage the relationship between ownership and the world’s most reputed hotel brands.”",
+    "heroImage": "/images/h3.jpg",
+    "items": [
+      {
+        "title": "Franchise & MA Structuring",
+        "image": "/images/2.jpg",
+        "alt": "Franchise and management agreement structuring",
+        "text": "Negotiating and structuring management and franchise agreements."
+      },
+      {
+        "title": "Standards Compliance",
+        "image": "/images/5.jpg",
+        "alt": "Brand standards compliance",
+        "text": "Ensuring day-to-day operations meet brand-mandated standards."
+      },
+      {
+        "title": "Loyalty & Distribution",
+        "image": "/images/7.jpg",
+        "alt": "Loyalty programs and distribution systems",
+        "text": "Integrating brand loyalty programs and global distribution systems."
+      },
+      {
+        "title": "Renewals & Repositioning",
+        "image": "/images/6.jpg",
+        "alt": "Renewals and brand repositioning",
+        "text": "Managing renewals, re-flagging and brand-transition projects."
+      }
+    ],
+    "experience": {
+      "title": "Liaison Experience Across Major Global Brands",
+      "brands": ["Marriott International", "IHG Hotels & Resorts", "Accor", "Best Western", "Hilton"],
+      "image": "/images/6.jpg",
+        "alt": "Renewals and brand repositioning",
+      "note": "…and other leading international hotel groups, structured on a case-by-case basis."
+    }
+  }
+]

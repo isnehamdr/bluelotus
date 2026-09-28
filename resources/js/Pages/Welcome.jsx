@@ -361,23 +361,19 @@
 // }
 
 
-import Capabilities from '@/HomePage/Capabilities'
-import DestinationExpertise from '@/HomePage/DestinationExpertise'
-import Footer from '@/HomePage/Footer'
-import Hero from '@/HomePage/Hero'
-// import Intro from '@/HomePage/Intro'
-import KeyStats from '@/HomePage/KeyStats'
-import Maps from '@/HomePage/Maps'
-// import MarketSlider from '@/HomePage/MarketSlider'
-import Navbar from '@/HomePage/Navbar'
-// import PartnersCarousel from '@/HomePage/Partnerscarousel'
-import PortfolioSection from '@/HomePage/Portfoliosection'
-import BackToTop from '@/HomePage/BacktoTop'
+
+import DestinationExpertise from '@/HomeComponents/DestinationExpertise'
+import Footer from '@/HomeComponents/Footer'
+import Hero from '@/HomeComponents/Hero'
+import KeyStats from '@/HomeComponents/KeyStats'
+import Maps from '@/HomeComponents/Maps'
+import Navbar from '@/HomeComponents/Navbar'
+import PortfolioSection from '@/HomeComponents/Portfoliosection'
+import BackToTop from '@/HomeComponents/BacktoTop'
 import React from 'react'
-import About from '@/HomePage/About'
-import Whylotus from '@/HomePage/Whylotus'
-import Engagement from '@/HomePage/Engagement'
-// import ServiceModel from '@/HomePage/ServiceModel'
+import About from '@/HomeComponents/About'
+import Whylotus from '@/HomeComponents/Whylotus'
+import Engagement from '@/HomeComponents/Engagement'
 
 
 const Welcome = () => {
@@ -386,18 +382,13 @@ const Welcome = () => {
     <Navbar/>
     <BackToTop/>
     <Hero/>
-       {/* <Intro/> */}
-<About/>
-
+    <About/>
     <PortfolioSection/>
     <Maps/>
     <DestinationExpertise/>
     <KeyStats/>
     <Whylotus/>
     <Engagement/>
-    {/* <Capabilities/> */}
-    {/* <MarketSlider/> */}
-    {/* <PartnersCarousel/> */}
     <Footer/>
     </>
   )
