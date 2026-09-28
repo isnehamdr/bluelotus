@@ -10,39 +10,51 @@
         "title": "Room Division",
         "image": "/images/1.jpg",
         "alt": "Front office of a Blue Lotus managed property",
-        "text": "Front office, reservations & guest services from arrival to departure."
+        "text": "Front office, reservations & guest services from arrival to departure. We look after every guest touchpoint, from booking to check-out, so each stay feels smooth, welcoming and consistent."
       },
       {
         "title": "Food & Beverage",
         "image": "/images/2.jpg",
         "alt": "Dining outlet of a Blue Lotus managed property",
-        "text": "Outlet management, banquets & culinary standards driving covers and spend."
+        "text": "Outlet management, banquets & culinary standards driving covers and spend. We balance quality, service and cost control to deliver memorable dining and events that lift guest satisfaction and profit."
       },
       {
         "title": "Other Operating Departments",
         "image": "/images/3.jpg",
         "alt": "Spa and health club of a Blue Lotus managed property",
+        "text": "Supporting services that round out the guest experience and add revenue, each run to the same standards as the core departments.",
         "points": ["Spa & Health Club", "Transportation", "Business Center", "Telephone", "Laundry"]
       },
       {
         "title": "Admin & General",
         "image": "/images/4.jpg",
         "alt": "Administrative office of a Blue Lotus managed property",
-        "text": "HR, procurement, IT, and administrative support and Finance functions."
+        "text": "HR, procurement, IT, and administrative support and Finance functions. These teams keep the property compliant, well staffed and financially controlled, so operating departments can focus on guests.",
+        "points": ["Executive Office", "Finance Department", "Human Resources", "Security Department"]
       },
       {
         "title": "Sales & Marketing",
         "image": "/images/5.jpg",
         "alt": "Sales and marketing team at work",
+        "text": "Our sales and marketing team builds demand and protects rate integrity across every guest segment.",
         "points": [
           "Corporate, MICE & group accounts driving direct revenue.",
           "Brand positioning, digital presence & demand generation."
         ]
       },
       {
+        "title": "Information Technology",
+        "image": "/images/7.jpg",
+        "alt": "IT system support at a Blue Lotus managed property",
+        "text": "Reliable technology supports every department. Our team keeps property systems secure, connected and running smoothly, and resolves issues quickly.",
+        "points": ["System Support"]
+      },
+      {
         "title": "Engineering Department & Utility",
         "image": "/images/6.jpg",
-        "alt": "Engineering and utility area of a Blue Lotus managed property"
+        "alt": "Engineering and utility area of a Blue Lotus managed property",
+        "text": "Proactive care of the building and its systems protects guest comfort, safety and asset value.",
+        "points": ["Repair and Maintenance", "Utility (Electricity, Water & Waste)"]
       }
     ]
   },
@@ -50,25 +62,44 @@
     "slug": "asset-management",
     "label": "Pillar Two",
     "title": "Asset Management",
+    "intro": "Disciplined oversight that protects and grows asset value on behalf of ownership.",
     "heroImage": "/images/h2.jpg",
     "items": [
       {
         "title": "Financial Performance",
         "image": "/images/5.jpg",
         "alt": "Financial performance review",
-        "text": "Monitor GOP, EBITDA, cash flow and benchmark results."
+        "text": "Monitor GOP, EBITDA, cash flow and benchmark results. We review performance against budget and peer hotels, giving owners a clear view of where profit is made and where it can improve."
       },
       {
         "title": "Revenue & Commercial Strategy",
         "image": "/images/6.jpg",
         "alt": "Revenue and commercial strategy review",
-        "text": "Evaluate ADR, RevPAR, segmentation and distribution."
+        "text": "Evaluate ADR, RevPAR, segmentation and distribution. We check that pricing, channel mix and market segments work together to maximize revenue."
       },
       {
         "title": "Operator Performance",
         "image": "/images/7.jpg",
         "alt": "Operator performance review",
-        "text": "Review KPIs, management fees and contractual obligations."
+        "text": "Review KPIs, management fees and contractual obligations. We hold the operator to agreed targets and make sure fees and obligations are met fairly on both sides."
+      },
+      {
+        "title": "Capital Expenditure (CapEx)",
+        "image": "/images/3.jpg",
+        "alt": "Renovation and FF&E planning",
+        "text": "Approve renovations and manage FF&E reserves. We plan capital spending carefully so upgrades keep the property competitive and are funded in a timely, cost-effective way."
+      },
+      {
+        "title": "Strategic Planning",
+        "image": "/images/4.jpg",
+        "alt": "Business planning and market analysis",
+        "text": "Prepare business plans and market analysis. Annual and long-term plans are grounded in market data and set clear goals for the asset's next stage."
+      },
+      {
+        "title": "Investment Decisions",
+        "image": "/images/1.jpg",
+        "alt": "Investment decision review",
+        "text": "Renovate, expand, rebrand, sell, refinance or acquire. We weigh the risks and returns of each option to help owners choose the right move at the right time."
       }
     ]
   },
@@ -83,33 +114,26 @@
         "title": "Franchise & MA Structuring",
         "image": "/images/2.jpg",
         "alt": "Franchise and management agreement structuring",
-        "text": "Negotiating and structuring management and franchise agreements."
+        "text": "Negotiating and structuring management and franchise agreements. We help owners secure balanced terms on fees, performance tests and contract length from day one."
       },
       {
         "title": "Standards Compliance",
         "image": "/images/5.jpg",
         "alt": "Brand standards compliance",
-        "text": "Ensuring day-to-day operations meet brand-mandated standards."
+        "text": "Ensuring day-to-day operations meet brand-mandated standards. We prepare for audits, close gaps early and keep the property in good standing with the brand."
       },
       {
         "title": "Loyalty & Distribution",
         "image": "/images/7.jpg",
         "alt": "Loyalty programs and distribution systems",
-        "text": "Integrating brand loyalty programs and global distribution systems."
+        "text": "Integrating brand loyalty programs and global distribution systems. Connecting the hotel to brand booking channels and member programs widens its reach and supports more direct bookings."
       },
       {
         "title": "Renewals & Repositioning",
         "image": "/images/6.jpg",
         "alt": "Renewals and brand repositioning",
-        "text": "Managing renewals, re-flagging and brand-transition projects."
+        "text": "Managing renewals, re-flagging and brand-transition projects. We plan each change from negotiation to reopening so disruption to guests and revenue stays low."
       }
-    ],
-    "experience": {
-      "title": "Liaison Experience Across Major Global Brands",
-      "brands": ["Marriott International", "IHG Hotels & Resorts", "Accor", "Best Western", "Hilton"],
-      "image": "/images/6.jpg",
-        "alt": "Renewals and brand repositioning",
-      "note": "…and other leading international hotel groups, structured on a case-by-case basis."
-    }
+    ]
   }
 ]

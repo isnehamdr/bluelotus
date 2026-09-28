@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef, useState } from 'react'
 import { Head } from '@inertiajs/react'
 import Navbar from '@/HomeComponents/Navbar'
 import Footer from '@/HomeComponents/Footer'
+import BackToTop from '@/HomeComponents/BackToTop'
 
 // Fraction of the hero's height the user scrolls before the logo is fully docked
 const DOCK_SCROLL_FRACTION = 0.5
@@ -90,6 +91,7 @@ export default function DetailPage({ capability }) {
   return (
     <>
     <Navbar/>
+    <BackToTop/>
     <main className="w-full font-['Montserrat',ui-sans-serif,system-ui,sans-serif]">
       <Head title={`${title} | Blue Lotus Hospitality`} />
 
