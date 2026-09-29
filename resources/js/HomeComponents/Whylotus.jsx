@@ -28,20 +28,42 @@ const reasons = [
 // Kept small and cropped at the corner so it reads as a signature detail, not a centerpiece.
 function LotusWatermark({ className = '' }) {
   return (
-    <svg viewBox="0 0 100 100" className={className} aria-hidden="true">
-      {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => (
-        <ellipse
-          key={angle}
-          cx="50"
-          cy="30"
-          rx="7"
-          ry="20"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.2"
-          transform={`rotate(${angle} 50 50)`}
-        />
-      ))}
+    <svg
+      viewBox="0 0 100 72"
+      className={className}
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+    >
+      <g stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+        {/* Center petal */}
+        <path d="M50 60 C43 48 40 26 50 8 C60 26 57 48 50 60" />
+
+        {/* Inner petals */}
+        <path d="M49.5 60 C43 48 35 29 31 18 C43 22 48 39 49.5 60" />
+        <path d="M50.5 60 C57 48 65 29 69 18 C57 22 52 39 50.5 60" />
+
+        {/* Middle petals */}
+        <path d="M49 60 C37 54 24 39 20 27 C34 29 45 43 49 60" />
+        <path d="M51 60 C63 54 76 39 80 27 C66 29 55 43 51 60" />
+
+        {/* Outer petals */}
+        <path d="M48.5 60 C33 59 16 48 10 39 C23 38 40 49 48.5 60" />
+        <path d="M51.5 60 C67 59 84 48 90 39 C77 38 60 49 51.5 60" />
+
+        {/* Inner decorative curves */}
+        <path d="M49 59 C46 46 45 35 42 29" />
+        <path d="M51 59 C54 46 55 35 58 29" />
+        <path d="M44 58 C37 48 32 40 26 35" />
+        <path d="M56 58 C63 48 68 40 74 35" />
+
+        {/* Bottom flourishes */}
+        <path d="M48 61 C37 66 27 67 17 64 C10 62 4 58 5 54 C6 51 10 52 13 54" />
+        <path d="M52 61 C63 66 73 67 83 64 C90 62 96 58 95 54 C94 51 90 52 87 54" />
+
+        {/* Center jewel */}
+        <circle cx="50" cy="60" r="3.8" />
+      </g>
     </svg>
   )
 }
@@ -50,7 +72,7 @@ const Whylotus = () => {
   return (
     <section className="relative overflow-hidden bg-[#001a44] px-6 py-16 sm:px-10 sm:py-20 lg:px-20 lg:py-28">
       {/* Watermark now anchors to the section itself, cropped at the corner */}
-      <LotusWatermark className="pointer-events-none absolute -bottom-10 -left-10 h-44 w-44 text-white/[0.05] sm:h-72 sm:w-72" />
+      <LotusWatermark className="pointer-events-none absolute -bottom-16 -left-14 h-44 w-44 text-[#0d264e]  sm:h-96 sm:w-96" />
 
       <div className="relative mx-auto max-w-7xl">
         {/* Main content */}
