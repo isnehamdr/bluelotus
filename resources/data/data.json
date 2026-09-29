@@ -23,14 +23,25 @@
         "image": "/images/3.jpg",
         "alt": "Spa and health club of a Blue Lotus managed property",
         "text": "Supporting services that round out the guest experience and add revenue, each run to the same standards as the core departments.",
-        "points": ["Spa & Health Club", "Transportation", "Business Center", "Telephone", "Laundry"]
+        "points": [
+          "Spa & Health Club",
+          "Transportation",
+          "Business Center",
+          "Telephone",
+          "Laundry"
+        ]
       },
       {
         "title": "Admin & General",
         "image": "/images/4.jpg",
         "alt": "Administrative office of a Blue Lotus managed property",
         "text": "HR, procurement, IT, and administrative support and Finance functions. These teams keep the property compliant, well staffed and financially controlled, so operating departments can focus on guests.",
-        "points": ["Executive Office", "Finance Department", "Human Resources", "Security Department"]
+        "points": [
+          "Executive Office",
+          "Finance Department",
+          "Human Resources",
+          "Security Department"
+        ]
       },
       {
         "title": "Sales & Marketing",
@@ -47,14 +58,19 @@
         "image": "/images/7.jpg",
         "alt": "IT system support at a Blue Lotus managed property",
         "text": "Reliable technology supports every department. Our team keeps property systems secure, connected and running smoothly, and resolves issues quickly.",
-        "points": ["System Support"]
+        "points": [
+          "System Support"
+        ]
       },
       {
         "title": "Engineering Department & Utility",
         "image": "/images/6.jpg",
         "alt": "Engineering and utility area of a Blue Lotus managed property",
         "text": "Proactive care of the building and its systems protects guest comfort, safety and asset value.",
-        "points": ["Repair and Maintenance", "Utility (Electricity, Water & Waste)"]
+        "points": [
+          "Repair and Maintenance",
+          "Utility (Electricity, Water & Waste)"
+        ]
       }
     ]
   },
@@ -62,8 +78,11 @@
     "slug": "asset-management",
     "label": "Pillar Two",
     "title": "Asset Management",
-    "intro": "Disciplined oversight that protects and grows asset value on behalf of ownership.",
     "heroImage": "/images/h2.jpg",
+    "overview": {
+      "title": "Hotel Asset Management",
+      "text": "Asset management is the discipline of maximizing the long-term value and profitability of a hotel on behalf of its owners or investors. While the operator runs the property day-to-day, the asset manager safeguards the owner's investment and drives the highest possible return by ensuring the hotel is operated efficiently, the physical asset is protected, investment decisions are optimized, and the property generates maximum cash flow with long-term value."
+    },
     "items": [
       {
         "title": "Financial Performance",
@@ -100,6 +119,178 @@
         "image": "/images/1.jpg",
         "alt": "Investment decision review",
         "text": "Renovate, expand, rebrand, sell, refinance or acquire. We weigh the risks and returns of each option to help owners choose the right move at the right time."
+      }
+    ],
+    "sections": [
+      {
+        "type": "kpi-columns",
+        "accent": "teal",
+        "title": "Typical KPIs Monitored",
+        "columns": [
+          {
+            "label": "Financial",
+            "tone": "green",
+            "items": [
+              "GOP",
+              "EBITDA",
+              "NOI",
+              "Cash Flow",
+              "ROI"
+            ]
+          },
+          {
+            "label": "Commercial",
+            "tone": "navy",
+            "items": [
+              "Occupancy",
+              "ADR",
+              "RevPAR",
+              "TRevPAR",
+              "Direct Booking %"
+            ]
+          },
+          {
+            "label": "Operations",
+            "tone": "teal",
+            "items": [
+              "Guest Satisfaction",
+              "Employee Turnover",
+              "Online Ratings",
+              "Market Share",
+              "Labor Productivity"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "process",
+        "accent": "maroon",
+        "label": "Cadence",
+        "title": "The Monthly Asset Management Process",
+        "steps": [
+          {
+            "title": "Month End Data Collection",
+            "points": [
+              "Monthly P&L Review",
+              "Balance Sheet & Cash Flow",
+              "Departmental Performance"
+            ]
+          },
+          {
+            "title": "Financial Performance Review",
+            "points": [
+              "Revenue",
+              "Occupancy",
+              "ADR",
+              "RevPAR",
+              "GOP"
+            ],
+            "note": "Actual vs. Budget vs. Forecast vs. Market"
+          },
+          {
+            "title": "Commercial & Revenue Review",
+            "points": [
+              "Market Share / Competitor Positioning",
+              "Segmentation",
+              "Revenue Mix"
+            ]
+          },
+          {
+            "title": "Operator Performance Review",
+            "points": [
+              "Financial Target",
+              "Guest Satisfaction",
+              "Brand Standard",
+              "Management Fees",
+              "Cost Control Measure"
+            ]
+          },
+          {
+            "title": "Budget vs. Forecast Review"
+          },
+          {
+            "title": "Capex & Property Condition Review",
+            "points": [
+              "Approved Capex",
+              "Actual Spending",
+              "Renovation Projects",
+              "ROI",
+              "FF&E Reserve"
+            ]
+          },
+          {
+            "title": "Owners / Asset Management Meeting"
+          },
+          {
+            "title": "Follow-up, Tracking and Action Plan"
+          }
+        ]
+      },
+      {
+        "type": "stats-questions",
+        "accent": "orange",
+        "label": "Case in point",
+        "title": "Example: A 150-Room Resort",
+        "stats": [
+          {
+            "value": "72%",
+            "label": "Occupancy"
+          },
+          {
+            "value": "NPR 12,500",
+            "label": "ADR"
+          },
+          {
+            "value": "NPR 9,000",
+            "label": "RevPAR"
+          },
+          {
+            "value": "31%",
+            "label": "GOP Margin"
+          }
+        ],
+        "lead": "The operator may consider this acceptable. An asset manager asks harder questions:",
+        "questions": [
+          "Why is the competitor achieving 78% occupancy?",
+          "Why is the banquet business underperforming?",
+          "Can the spa and F&B outlets generate more revenue?",
+          "Is payroll too high?",
+          "Should meeting spaces be renovated for higher-yield corporate events?",
+          "Would stronger digital marketing improve direct bookings?"
+        ]
+      },
+      {
+        "type": "comparison",
+        "accent": "teal",
+        "label": "Comparison",
+        "title": "Asset Management vs. Hotel Operations",
+        "left": {
+          "title": "Hotel Operations",
+          "rows": [
+            "Runs the hotel daily",
+            "Focuses on service delivery",
+            "Manages staff",
+            "Solves daily operational issues",
+            "Reports to the operator or owner"
+          ]
+        },
+        "right": {
+          "title": "Asset Management",
+          "rows": [
+            "Oversees the owner's investment",
+            "Focuses on investment returns",
+            "Evaluates management performance",
+            "Makes strategic decisions",
+            "Represents the owner / investors"
+          ]
+        }
+      },
+      {
+        "type": "callout",
+        "label": "Why it matters now",
+        "title": "Asset Management in Nepal's Growing Hospitality Market",
+        "text": "As international brands and management agreements become more common, owners are realizing that appointing an operator is not enough. Independent oversight ensures brand standards are met, financial targets are achieved, capital is invested wisely, and asset value grows over time.",
+        "quote": "Asset management thinking bridges operations, finance, commercial strategy and owner relations — enabling stronger engagement with owners, operators, lenders and investors while enhancing both performance and long-term value."
       }
     ]
   },
