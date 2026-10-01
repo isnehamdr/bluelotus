@@ -205,16 +205,14 @@ const NAV_LINKS = [
   {
     label: 'Our Capabilities',
     children: [
-     { label: 'Operator Model', href: '/detailpage/operator-model' },
-    { label: 'Asset Management', href: '/detailpage/asset-management' },
-    { label: 'Brand Liaison', href: '/detailpage/brand-liaison' },
+     { label: 'Operator Model', href: '/operator-model' },
+    { label: 'Asset Management', href: '/asset-management' },
+    { label: 'Brand Liaison', href: '/brand-liaison' },
     ],
   },
   { label: 'Our Team', href: '/team' },
   { label: 'Our Portfolio', href: '/portfolio' },
-  { label: 'About', href: '/impact' },
-  { label: 'Service', href: '/press' },
-  { label: 'Careers', href: '/careers' },
+  { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
 
