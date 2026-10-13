@@ -18,6 +18,15 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return Inertia::render('AboutPage');
 });
+Route::get('/team', function () {
+    return Inertia::render('TeamPage');
+});
+Route::get('/portfolio', function () {
+    return Inertia::render('PortfolioPage');
+});
+Route::get('/contact', function () {
+    return Inertia::render('ContactPage');
+});
 
 
 Route::get('/{slug}', function (string $slug) {
@@ -38,6 +47,8 @@ Route::get('/{slug}', function (string $slug) {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
 
 
 

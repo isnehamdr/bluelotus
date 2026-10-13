@@ -7,11 +7,10 @@ import React, {
 } from 'react'
 
 const DESTINATIONS = [
-  { title: 'Urban City Centers', image: '/images/d1.jpg' },
-  { title: 'Mountain Leisure', image: '/images/d2.jpg' },
-  { title: 'Beach Getaways', image: '/images/d3.jpg' },
-  { title: 'Urban City Centers', image: '/images/d4.jpg' },
-  { title: 'Mountain Leisure', image: '/images/d5.jpg' },
+  { title: 'Best Western Plus Kathmandu Hotel, Gaushala, Kathmandu', image: '/images/exp1.jpg' },
+  { title: 'Best Western Siraichuli Hotel, Bharatpur, Chitwan', image: '/images/exp2.jpg' },
+  { title: 'Manigram Bishram Batika, Manigram', image: '/images/exp3.webp' },
+  { title: 'River Bank Jungle Resort, Chitwan', image: '/images/exp4.jpg' },
 ]
 
 function getVisibleCards(width) {

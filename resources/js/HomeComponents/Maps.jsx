@@ -1,7 +1,7 @@
 import React from 'react'
 
 const MAP_EMBED_SRC =
-  'https://www.google.com/maps?q=Kathmandu%2C%20Nepal&output=embed'
+  'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3533.259744120647!2d85.30714727517018!3d27.678365826769724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDQwJzQyLjEiTiA4NcKwMTgnMzUuMCJF!5e0!3m2!1sne!2snp!4v1791877481227!5m2!1sne!2snp'
 
 export default function Maps({
   title = 'Where We Operate Across Nepal',

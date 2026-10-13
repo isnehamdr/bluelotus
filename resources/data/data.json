@@ -4,7 +4,7 @@
     "label": "Pillar One",
     "title": "Operator Model",
     "intro": "A single operating team accountable for every department — run to institutional standards.",
-    "heroImage": "/images/h1.jpg",
+    "heroImage": "/images/op.jpg",
     "items": [
       {
         "title": "Room Division",
@@ -78,7 +78,7 @@
     "slug": "asset-management",
     "label": "Pillar Two",
     "title": "Asset Management",
-    "heroImage": "/images/h2.jpg",
+    "heroImage": "/images/img6.png",
     "overview": {
       "title": "Hotel Asset Management",
       "text": "Asset management is the discipline of maximizing the long-term value and profitability of a hotel on behalf of its owners or investors. While the operator runs the property day-to-day, the asset manager safeguards the owner's investment and drives the highest possible return by ensuring the hotel is operated efficiently, the physical asset is protected, investment decisions are optimized, and the property generates maximum cash flow with long-term value."
@@ -299,7 +299,7 @@
     "label": "Pillar Three",
     "title": "Brand Liaison Service",
     "intro": "“We structure and manage the relationship between ownership and the world’s most reputed hotel brands.”",
-    "heroImage": "/images/h3.jpg",
+    "heroImage": "/images/img1.jpg",
     "items": [
       {
         "title": "Franchise & MA Structuring",
