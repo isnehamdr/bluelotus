@@ -1,62 +1,58 @@
 import React from 'react'
 
-// Put your photos in public/image/ and update the paths below
+// Put your photos in public/images/ and update the paths below
 const team = [
-  { name: 'Anjan Bagale', role: 'CEO', image: '/images/person.png' },
-  { name: 'Pooja Bagale', role: 'Chairman', image: '/images/person.png' },
-  { name: 'Bidhan Pokhrel', role: 'Marketing', image: '/images/person.png' },
-  { name: 'Binisha Singh Basnet', role: 'Marketing', image: '/images/person.png' },
+  { name: 'Anjan Bagale', role: 'CEO', image: '/images/user.png' },
+  { name: 'Pooja Bagale', role: 'Chairman', image: '/images/user.png' },
+  { name: 'Bidhan Pokhrel', role: 'Marketing', image: '/images/user.png' },
+  { name: 'Binisha Singh Basnet', role: 'Marketing', image: '/images/user.png' },
 ]
+
+const FALLBACK =
+  "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><rect width='400' height='500' fill='%23cbd5e1'/><circle cx='200' cy='190' r='70' fill='%2394a3b8'/><rect x='80' y='290' width='240' height='210' rx='110' fill='%2394a3b8'/></svg>"
 
 const TeamSection = () => {
   return (
     <section
-      className="w-full text-white py-10 sm:py-14 lg:py-16"
+      className="w-full py-12 sm:py-16 lg:py-20 text-white"
       style={{ backgroundColor: '#102a56', fontFamily: "'Montserrat', sans-serif" }}
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl font-bold uppercase tracking-wide text-white">
+        <h2 className="text-2xl sm:text-3xl font-bold uppercase tracking-wide">
           Our Team
         </h2>
-        <p className="mt-6 max-w-3xl text-base sm:text-2xl leading-relaxed text-white">
+        <p className="mt-4 sm:mt-6 max-w-3xl text-base sm:text-xl leading-relaxed text-white/90">
           Our leadership team is made up of industry leaders who blend
           capability and experience to drive results each and every day.
         </p>
 
-        {/* Cards (2x2) */}
-        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-12 max-w-7xl mx-auto">
+        {/* Cards: 2 cols on mobile/tablet, 4 on large screens */}
+        <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {team.map((member) => (
             <div
               key={member.name}
-              className="relative overflow-hidden"
-              style={{
-                // Height in px: 240px on small screens, grows with width, max 520px on large screens
-                height: 'clamp(240px, 24vw, 400px)',
-                backgroundColor: '#9ca3af',
-                border: '1px solid rgba(255,255,255,0.25)',
-              }}
+              className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-slate-300 ring-1 ring-white/20 shadow-lg"
             >
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-contain"
-                style={{ display: 'block' }}
+                loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.onerror = null
+                  e.currentTarget.src = FALLBACK
+                }}
+                className="absolute inset-0 h-full w-full object-contain"
               />
 
               {/* Bottom gradient + text */}
-              <div
-                className="absolute left-0 right-0 bottom-0 text-center px-3 pb-3"
-                style={{
-                  paddingTop: 56,
-                  background:
-                    'linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.6) 60%, rgba(0,0,0,0))',
-                }}
-              >
-                <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wide text-white">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent px-3 pb-4 pt-16 text-center">
+                <h3 className="text-xs sm:text-sm lg:text-base font-bold uppercase tracking-wide leading-tight">
                   {member.name}
                 </h3>
-                <p className="mt-1 text-xs text-white">{member.role}</p>
+                <p className="mt-1 text-[11px] sm:text-xs lg:text-sm text-white/80">
+                  {member.role}
+                </p>
               </div>
             </div>
           ))}

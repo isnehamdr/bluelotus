@@ -29,6 +29,7 @@ Route::get('/contact', function () {
 });
 
 
+
 Route::get('/{slug}', function (string $slug) {
     $path = resource_path('data/data.json');
 

@@ -44,7 +44,7 @@ const PortfolioGroup = () => {
       className="bg-[#e6e5e0] px-6 pb-20 text-[#12294f] md:px-12 lg:px-24"
       style={{ fontFamily: "'Montserrat', sans-serif" }}
     >
-      <div className="mx-auto flex max-w-7xl flex-col gap-24 gap-12">
+      <div className="mx-auto flex max-w-7xl flex-col  gap-12">
         {groups.map((group) => (
           <div key={group.title}>
             {/* Heading */}

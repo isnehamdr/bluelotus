@@ -4,7 +4,7 @@ import { Link } from '@inertiajs/react'
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Services', href: '/services' },
+  { label: 'Team', href: '/team' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Contact', href: '/contact' },
 ]
