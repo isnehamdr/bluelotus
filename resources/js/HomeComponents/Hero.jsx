@@ -1,10 +1,10 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 const SLIDES = [
-  { src: '/images/h1.jpg', caption: 'Blue Lotus Hospitality managed property' },
-  { src: '/images/h2.jpg', caption: 'Blue Lotus Hospitality managed property' },
-  { src: '/images/chitwan.avif', caption: 'Blue Lotus Hospitality managed property' },
-  { src: '/images/chitwan2.jpg', caption: 'Blue Lotus Hospitality managed property' },
+  { src: '/images/exp1.jpg', caption: 'Best Western Plus Kathmandu Hotel' },
+  { src: '/images/exp2.jpg', caption: 'Best Western Siraichuli Hotel' },
+  { src: '/images/exp3.webp', caption: 'Manigram Bishram Batika' },
+  { src: '/images/exp4.jpg', caption: 'River Bank Jungle Resort' },
 ]
 
 const INTERVAL_MS = 6000
@@ -134,44 +134,56 @@ export default function Hero() {
         }}
       >
         <img
-          src="/images/logo.jpeg"
+          src="/images/logo.png"
           alt="Blue Lotus Hospitality"
           className="h-full w-full rounded-full object-cover"
         />
       </a>
 
-      {/* Center: spacer (keeps original spacing now the real logo lives above), dots, wordmark */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-6 pb-8 pt-44">
-        <div
-          ref={spacerRef}
-          className="h-24 w-24 sm:h-32 sm:w-32 lg:h-[180px] lg:w-[180px]"
-          aria-hidden="true"
-        />
+    {/* Center: spacer (keeps original spacing), dots, slide caption */}
+<div className="absolute inset-0 flex flex-col items-center justify-center px-4 pb-8 pt-36 sm:px-6 sm:pt-40 lg:pt-44">
+  <div
+    ref={spacerRef}
+    className="h-24 w-24 sm:h-32 sm:w-32 lg:h-[180px] lg:w-[180px]"
+    aria-hidden="true"
+  />
 
-        <div
-          className="mt-6 flex items-center gap-3 sm:mt-8 lg:mt-10"
-          role="tablist"
-          aria-label="Hero slides"
-        >
-          {SLIDES.map((slide, i) => (
-            <button
-              key={slide.src}
-              type="button"
-              role="tab"
-              aria-selected={i === active}
-              aria-label={`Show slide ${i + 1}`}
-              onClick={() => setActive(i)}
-              className={`h-2.5 w-2.5 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white sm:h-3 sm:w-3 ${
-                i === active ? 'bg-white' : 'bg-white/50 hover:bg-white/75'
-              }`}
-            />
-          ))}
-        </div>
+  <div
+    className="mt-6 flex items-center gap-3 sm:mt-8 lg:mt-10"
+    role="tablist"
+    aria-label="Hero slides"
+  >
+    {SLIDES.map((slide, i) => (
+      <button
+        key={slide.src}
+        type="button"
+        role="tab"
+        aria-selected={i === active}
+        aria-label={`Show slide ${i + 1}`}
+        onClick={() => setActive(i)}
+        className={`h-2.5 w-2.5 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white sm:h-3 sm:w-3 ${
+          i === active ? 'bg-white' : 'bg-white/50 hover:bg-white/75'
+        }`}
+      />
+    ))}
+  </div>
 
-        <p className="mt-3 text-3xl font-light leading-none tracking-[0.12em] uppercase sm:mt-4 sm:text-4xl lg:text-5xl">
-          Hospitality
-        </p>
-      </div>
+  {/* Captions are stacked in one grid cell, so the box always keeps the height of the
+      longest caption. This stops the dots and logo from jumping when a caption wraps. */}
+  <div className="mt-4 grid w-full max-w-sm sm:mt-5 sm:max-w-xl md:max-w-2xl lg:mt-6 lg:max-w-4xl" aria-live="polite">
+    {SLIDES.map((slide, i) => (
+      <p
+        key={slide.src}
+        aria-hidden={i !== active}
+        className={`col-start-1 row-start-1 break-words text-center text-xl font-light uppercase leading-snug tracking-[0.06em] transition-all duration-1000 sm:text-2xl sm:tracking-[0.08em] md:text-3xl lg:text-4xl lg:tracking-[0.1em] xl:text-5xl ${
+          i === active ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0'
+        }`}
+      >
+        {slide.caption}
+      </p>
+    ))}
+  </div>
+</div>
     </section>
   )
 }

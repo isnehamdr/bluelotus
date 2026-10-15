@@ -211,6 +211,7 @@ import { useForm } from '@inertiajs/react'
 import Footer from '@/HomeComponents/Footer'
 import Navbar from '@/HomeComponents/Navbar'
 import PageBanner from '@/HomeComponents/PageBanner' // adjust to where you save it
+import BackToTop from '@/HomeComponents/BackToTop'
 
 // ---- Edit these with the real details ------------------------------------
 const CONTACT = {
@@ -304,6 +305,7 @@ const ContactPage = () => {
   return (
     <>
       <Navbar />
+      <BackToTop/>
 
       <PageBanner image="/images/contact.jpg" alt="Contact Blue Lotus Hospitality" title="Contact Us" />
 

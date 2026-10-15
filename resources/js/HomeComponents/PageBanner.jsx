@@ -106,7 +106,7 @@ export default function PageBanner({ image, alt = '', title }) {
         }}
       >
         <img
-          src="/images/logo.jpeg"
+          src="/images/logo.png"
           alt="Blue Lotus Hospitality"
           className="h-full w-full rounded-full object-cover"
         />

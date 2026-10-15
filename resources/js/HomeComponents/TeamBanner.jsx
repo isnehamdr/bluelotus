@@ -113,7 +113,7 @@ export default function TeamBanner() {
           }}
         >
           <img
-            src="/images/logo.jpeg"
+            src="/images/logo.png"
             alt="Blue Lotus Hospitality"
             className="h-full w-full rounded-full object-cover"
           />
@@ -143,10 +143,7 @@ export default function TeamBanner() {
           </h2>
           
           <p className="text-lg leading-relaxed md:text-xl lg:text-xl lg:leading-loose">
-            Community, in its many forms, remains at the center of HHM Hotels' mission: creating an
-            internal community for associates, giving back to the local communities in which hotels
-            operate, and positively impacting communities thousands of miles away through
-            EarthView® and other outreach programs.
+           Community, in its many forms, remains at the heart of Blue Lotus Hospitality’s mission: building a close-knit team culture for our associates, giving back to the local communities where our properties operate, and making a positive difference in communities far beyond our doors through our outreach and sustainability programs.
           </p>
         </div>
       </section>

@@ -110,7 +110,7 @@ function PageBanner({
         className="invisible fixed left-1/2 z-[41] block -translate-x-1/2 rounded-full drop-shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
       >
         <img
-          src="/images/logo.jpeg"
+          src="/images/logo.png"
           alt="Blue Lotus Hospitality"
           className="h-full w-full rounded-full object-cover"
         />
@@ -125,6 +125,7 @@ export default function AboutPage() {
       <Head title="About Us | Blue Lotus Hospitality" />
 
       <Navbar />
+      <BackToTop/>
 
       <main>
         <PageBanner />

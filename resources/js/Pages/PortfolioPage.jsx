@@ -1,3 +1,4 @@
+import BackToTop from '@/HomeComponents/BackToTop'
 import Footer from '@/HomeComponents/Footer'
 import Navbar from '@/HomeComponents/Navbar'
 import PortfolioGroup from '@/HomeComponents/PortfolioGroup'
@@ -89,6 +90,7 @@ const PortfolioPage = () => {
     <>
 
     <Navbar/>
+    <BackToTop/>
       {/* Hero Section */}
       <section
         ref={heroRef}
@@ -118,7 +120,7 @@ const PortfolioPage = () => {
           }}
         >
           <img
-            src="/images/logo.jpeg"
+            src="/images/logo.png"
             alt="Blue Lotus Hospitality"
             className="h-full w-full rounded-full object-cover"
           />

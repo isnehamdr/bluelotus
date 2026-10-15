@@ -130,7 +130,7 @@ export default function Footer({
           <div>
             <div className="flex items-center gap-3">
               <img
-                src="/images/logo.jpeg"
+                src="/images/logo.png"
                 alt="Blue Lotus Hospitality"
                 className="h-11 w-11 object-contain"
               />
@@ -220,7 +220,7 @@ export default function Footer({
               rel="noopener noreferrer"
               className="text-white/70 underline-offset-2 hover:text-[#bc8b29] hover:underline"
             >
-              S.A.I.T Solution Nepal
+              S.A I.T Solution Nepal
             </a>
           </p>
         </div>

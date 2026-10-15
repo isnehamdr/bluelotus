@@ -1,3 +1,4 @@
+import BackToTop from '@/HomeComponents/BackToTop'
 import Footer from '@/HomeComponents/Footer'
 import Navbar from '@/HomeComponents/Navbar'
 import TeamBanner from '@/HomeComponents/TeamBanner'
@@ -8,6 +9,7 @@ const TeamPage = () => {
   return (
     <>
     <Navbar/>
+    <BackToTop/>
     <TeamBanner/>
     <TeamSection/>
     <Footer/>
