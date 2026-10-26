@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title inertia>{{ config('app.name', 'BlueLotusHospitality') }}</title>
-        <link rel="icon" href="/images/logo.jpeg" type="image/jpeg"/>
+        <link rel="icon" href="/images/logo.png" type="image/png"/>
 
         <!-- Fonts -->
 
